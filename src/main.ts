@@ -14,7 +14,7 @@ addNewCommentUsingSpread(pastaDish, pastaComment);
 addNewCommentUsingConcat(pastaDish, pastaComment);
 addNewCommentUsingSpreadNoMutations(pastaDish, pastaComment);
 
-// In this case, since addNewCommentUsingPush add and output one comment in pastaDish
-// addNewCommentUsingSpread will add and output another comment, so pastaDish will have two comments
+// In this case, addNewCommentUsingPush and addNewCommentUsingSpread add one comment each to pastaDish
+// so pastaDish will have two comments
 // Then addNewCommentUsingConcat and addNewCommentUsingSpreadNoMutations will output three comments
 // But they won't mutate pastaDish, so it will remain with two comments
