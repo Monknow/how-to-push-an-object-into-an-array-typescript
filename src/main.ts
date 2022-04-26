@@ -1,14 +1,20 @@
 import {pastaDish, pastaComment} from "./pastaDish";
-import {addNewComment as arrayPushAddNewComment} from "./using-array-push";
-import {addNewComment as arrayConcatAddNewComment} from "./using-array-concat";
-import {addNewComment as spreadAddNewComment} from "./using-spread-operator";
-import {addNewComment as spreadNoMutationsAddNewComment} from "./using-spread-operator-and-no-mutations";
+import {addNewComment as addNewCommentUsingPush} from "./using-array-push";
+import {addNewComment as addNewCommentUsingConcat} from "./using-array-concat";
+import {addNewComment as addNewCommentUsingSpread} from "./using-spread-operator";
+import {addNewComment as addNewCommentUsingSpreadNoMutations} from "./using-spread-operator-and-no-mutations";
 
 // Methods that mutate the original object
 // Therefore, other functions' output will be affected by them
-arrayPushAddNewComment(pastaDish, pastaComment);
-spreadAddNewComment(pastaDish, pastaComment);
+
+addNewCommentUsingPush(pastaDish, pastaComment);
+addNewCommentUsingSpread(pastaDish, pastaComment);
 
 // Methods that don't mutate the original object, but create a new one
-spreadNoMutationsAddNewComment(pastaDish, pastaComment);
-arrayConcatAddNewComment(pastaDish, pastaComment);
+addNewCommentUsingConcat(pastaDish, pastaComment);
+addNewCommentUsingSpreadNoMutations(pastaDish, pastaComment);
+
+// In this case, since addNewCommentUsingPush add and output one comment in pastaDish
+// addNewCommentUsingSpread will add and output another comment, so pastaDish will have two comments
+// Then addNewCommentUsingConcat and addNewCommentUsingSpreadNoMutations will output three comments
+// But they won't mutate pastaDish, so it will remain with two comments

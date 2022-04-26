@@ -4,5 +4,5 @@ export const addNewComment = (dish: Dish, newComment: Comment) => {
 	const {comments} = dish;
 
 	dish.comments = [...comments, newComment];
-	console.log(dish);
+	console.log(dish.comments);
 };
